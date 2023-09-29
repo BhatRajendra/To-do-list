@@ -59,32 +59,7 @@ app.get('/done/:id',async (req,res)=>{
     
 });
 //-------------------------------
-//all down is for lists for specific places..
-// const listSchema={
-//     name:String,
-//     todos:[todoSchema],
-// };
-// const listModel=new mongoose.model('customLists',listSchema);
-//-------------------------------
-// app.get('/:listName',async (req,res)=>{
-//     const listName=req.params.listName;
-//     const ifExists= await listModel.findOne({name:listName});
-//     const date=new Date().toDateString();
-//     if(!ifExists){
-//         await listModel.insertMany({
-//             name:listName,
-//             todos:[]
-//         });  
-//         res.redirect('/'+listName);//no ':' cause you are calling that page
-//     }else{
-//         res.render("index.ejs",{
-//             heading:ifExists.name,
-//             todo:ifExists.todos,
-//             date:date
-//         });
-//     }
-// });
-//if you want to continue..watch web course sec 35,video 269
+
 
 app.listen(port,()=>{
     console.log("server is up and running");
