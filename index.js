@@ -1,5 +1,8 @@
 import express from 'express';
 const app=express();
+import {dirname} from 'path';
+import {fileURLToPath} from 'url';
+const dir=dirname(fileURLToPath(import.meta.url));
 //-------------------------------
 import body from 'body-parser';
 //-------------------------------
@@ -15,7 +18,7 @@ const todoSchema={
 const todoModel=new mongoose.model('TodoList',todoSchema);
 //-------------------------------
 
-app.use(express.static("./public"));
+app.use(express.static(dir+"/public"));
 app.use(body.urlencoded({extended:true}));
 //-------------------------------
 
@@ -58,9 +61,8 @@ app.get('/done/:id',async (req,res)=>{
     }
     
 });
-//-------------------------------
 
 
 app.listen(port,()=>{
-    console.log("server is up and running on port "+port);
+    console.log("server is up and running");
 });
