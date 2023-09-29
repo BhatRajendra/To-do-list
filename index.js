@@ -7,7 +7,7 @@ const dir=dirname(fileURLToPath(import.meta.url));
 import body from 'body-parser';
 //-------------------------------
 import mongoose from 'mongoose';
-mongoose.connect("mongodb+srv://BhatRaj:12345678910@cluster0.owr5qvh.mongodb.net/?retryWrites=true&w=majority/todoList");
+mongoose.connect("mongodb+srv://BhatRaj:12345678910@cluster0.owr5qvh.mongodb.net/todoList");
 //-------------------------------
 const port=process.env.PORT || 3000;
 //-------------------------------
